@@ -1,1 +1,42 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int s, t;
+    cin >> s >> t;
+
+    int a, b;
+    cin >> a >> b;
+
+    int m, n;
+    cin >> m >> n;
+
+    int countApples = 0;
+    int countOranges = 0;
+
+    // apples
+    for (int i = 0; i < m; i++) {
+        int d;
+        cin >> d;
+        int position = a + d;
+        if (position >= s && position <= t) {
+            countApples++;
+        }
+    }
+
+    // oranges
+    for (int i = 0; i < n; i++) {
+        int d;
+        cin >> d;
+        int position = b + d;
+        if (position >= s && position <= t) {
+            countOranges++;
+        }
+    }
+
+    cout << countApples << endl;
+    cout << countOranges << endl;
+
+    return 0;
+}
 
